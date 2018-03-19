@@ -1698,7 +1698,7 @@ footer * {
       flex-basis: 100%;
       margin-bottom: 20px;
    }
-   }
+   
    footer .copyright__text {
       flex-basis: 30%;
       float: right;
@@ -1706,7 +1706,7 @@ footer * {
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {   
    #show-menu {
       padding: 0 10px 0 30px;
       height: 35px;
@@ -1753,7 +1753,6 @@ footer * {
    }
 
 
-   
 	#second-slider .draggable {
 		margin-left: 0 !important;
 		padding: 15px 0 15px 15px !important;
@@ -1771,7 +1770,8 @@ footer * {
 
    .user-cart__icon {
       top: -20px;
-      left: 100%;
+      left: 50%;
+      margin-left: -50%;
    }
 
    .offer__item {
