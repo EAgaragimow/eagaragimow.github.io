@@ -257,7 +257,6 @@ body {
 .catalogue .dop-mobile ul li a {
    transition: all .2s ease-in;
    display: inline-block;
-   border-bottom: 1px solid silver;
    padding: 15px 20px;
    color: #000;
    width: 100%;
@@ -1615,6 +1614,11 @@ footer * {
    }
    .catalogue .dop-mobile ul .green {
       background-color: #00CB6B;
+   }
+
+   .catalogue-menu__item a,
+   .catalogue .dop-mobile ul li a {
+      border-bottom: 1px solid silver;
    }
 
 
