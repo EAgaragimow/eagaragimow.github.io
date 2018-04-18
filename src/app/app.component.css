@@ -1,0 +1,96 @@
+.form {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.form input[type="text"],
+.form input[type="button"] {
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form input[type="text"] {
+    border: 1px solid #b3b3b3;
+    color: #b3b3b3;
+    margin-right: 1%;
+    padding: 10px;
+    width: 75%;
+}
+
+.form input[type="button"] {
+    background: #27ccc0;
+    width: 23%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all.2s ease-in;
+    padding: 11px 0;
+    color: #ffffff;
+}
+
+.form input[type="button"]:hover {
+    background: #27cca5;
+}
+
+.list-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item {
+    flex-basis: 100%;
+    line-height: 40px;
+    padding: 8px 5px;
+    border-bottom: 1px solid #f2f2f2;
+    position: relative;
+}
+
+.list-item:hover {
+    background: #fbfbfb;
+}
+
+.active:before {
+    display: block;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    background: #ff2f5a;
+    top: 0;
+    left: -22px;
+}
+
+.num-comments {
+    display: none;
+}
+
+.list-item-text .num-comments {
+  margin-left: 10px;
+  padding: 0 10px;
+  color: #ffffff;
+  line-height: 23px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 15px;
+  background: #27ccc0;
+}
+
+.list-item-delete {
+    float: right;
+    width: 18%;
+    padding: 10px 0;
+    background: #ffffff;
+    border: 1px solid #ff3159;
+    border-radius: 4px;
+    transition: all.2s ease-in;
+    cursor: pointer;
+    color: #ff3159;
+}
+
+.list-item-delete:hover {
+    background: #ff3159;
+    color: #fff;
+}

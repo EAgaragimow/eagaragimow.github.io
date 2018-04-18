@@ -1,0 +1,37 @@
+<main>
+    <div class="left-decor">
+        <h1>{{ title }}</h1>
+        <p>{{ comments }}</p>
+    </div>
+    <div class="right-action">
+        <div class="items">
+            <h2 class="title">Items</h2>
+            <div class="form">
+                <input type="text" id="inputID" [(ngModel)]="itemName" placeholder="Type name here...">
+                <input type="button" (click)="addItem()" value="Add new">
+            </div>
+            <ul class="list-items">
+                <li
+                    class="list-item"
+                    *ngFor="let item of getItems(); let i = index;"
+                    [id]="listNameForId[i]"
+                    (click)="isActive(active)"
+                    #active
+                >
+                    <span class="list-item-text">{{ item }}
+                      <span class="num-comments" *ngIf="locSt.getItem(listNameForId[i]) !== null; else elseBlock">
+                        {{ listComments.parse(locSt.getItem(listNameForId[i])).comments.length }}
+                      </span>
+                      <ng-template #elseBlock>
+                        <span>10</span>
+                      </ng-template>
+                    </span>
+                    <button class="list-item-delete" #current (click)="deleteItem(current)">Delete</button>
+                </li>
+            </ul>
+        </div>
+        <div class="comments">
+            <app-comments></app-comments>
+        </div>
+    </div>
+</main>

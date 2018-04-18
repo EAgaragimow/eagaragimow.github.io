@@ -1,0 +1,14 @@
+<h2 class="title">Comments <span></span></h2>
+
+<div class="wrap">
+  <div class="list-comments">
+    <div class="list-comment" *ngFor="let comment of getComments()">
+      <div class="comment-avatar"></div>
+      <p class="comment-text">{{ comment }}</p>
+    </div>
+  </div>
+  <div class="user-form">
+    <div class="user-avatar"></div>
+    <textarea [(ngModel)]="comment" (keypress)="setComment($event)" id="user-text" rows="4"></textarea>
+  </div>
+</div>
